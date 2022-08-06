@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <div th:replace = "Layout/layout ::Estilos"></div>
+        <link th:href="@{/css/listadoEmpleados.css}" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <header th:replace = "Layout/layout ::header"></header>
+        <div class="container-fluid">
+            <H1>Las marcas que manejamos</H1>
+            <a th:href="@{/Marcatennis/nuevo}">Agregar nueva marca</a>
+            <table class="table">       
+                <thead class="table-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Id</th>
+                        <th scope="col">Marca</th>
+                        <th scope="col">Modificar</th>
+                        <th scope="col">Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="item, contador:${marcatennis}">
+                        <th id="indice" scope="row" >[[${contador.count}]]</th>
+                        <td th:text=${item.marcaCod}>
+                        <td th:text="${item.marcaNom}"></td>
+                        <td><a th:href="@{/Marcatennis/modificar/}+${item.marcaCod}">Modificar</a></td>
+                        <td><a th:href="@{/Marcatennis/eliminar/}+${item.marcaCod}">Eliminar</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <footer th:replace = "Layout/layout ::footer"></footer>
+    </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Sneaker</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header th:fragment="header" class="header">
+            <nav class="navegador">
+                <div class="menu1">
+                    <div>
+                        <a href="https://www.instagram.com/"><i class="menu1-icono fa-brands fa-instagram"></i></a>
+                        <a href="https://www.facebook.com"><i class="menu1-icono fa-brands fa-facebook-f"></i></a>
+                        <a href="https://web.whatsapp.com/"><i class="menu1-icono fa-brands fa-whatsapp"></i></a>
+                    </div>
+                    <a th:href="@{/Login}"><button type="button" class="menu1-btn btn btn-outline-primary ">Iniciar Session</button></a>
+                </div>
+                <div class="menu2">
+                    <a th:href="@{/}"><div class="menu2-logo"><img src="src" alt="Logo"/></div></a>
+                    <ul class="filtro">
+                        <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="pagina2.html">Nuevo</a></li>
+                        <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="pagina3.html">Hombre</a></li>
+                        <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="pagina4.html">Mujer</a></li>
+                        <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="pagina5.html">Niños</a></li>
+                        <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="pagina6.html">Marcas</a></li>
+                    </ul>
+                    <div>
+                        <input type="text" class="menu2-buscador "  placeholder=" Buscar"/>
+                        <a href=""><i class="fa-regular fa-heart"></i></a>
+                        <a href=""><i class="fa-solid fa-box-open"></i></a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <footer th:fragment="footer" >
+            <div class="footer">
+                <div class="contactenos">
+                    <ul>
+                        <H5>Contactenos</H5>
+                        <li>Obten ayuda</li>
+                        <li>Retroalimentacion</li>
+                        <li>Telefono</li>
+                    </ul>
+                </div>
+                <div class="SobreNosotros">
+                    <ul>
+                        <H5>Sobre Nosotros</H5>
+                        <li>Noticias</li>
+                        <li>Inversores</li>
+                        <li>Propietarios</li>
+                    </ul>
+                </div>
+                <div>
+                    Costa Rica 2022 Todos los derechos reservados
+                </div>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js" integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    </body>
+</html>
