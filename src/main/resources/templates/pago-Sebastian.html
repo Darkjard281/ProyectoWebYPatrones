@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pago</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <link href="css/pago-Sebastian.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <h2>Metodo de pago</h2>
+        <p>Ingrese los datos que se le inidican a continuación para seguir con su compra:</p>
+        <div class="row">
+            <div class="col-75">
+                <div class="container">
+                    <form action="/action_page.php">
+
+                        <div class="row">
+                            <div class="col-50">
+                                <h3>Direccion de pago</h3>
+                                <label for="fname"><i class="fa fa-user"></i> Nombre completo</label>
+                                <input type="text" id="fname" name="firstname" placeholder="Juan Mata Palos">
+                                <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                                <input type="text" id="email" name="email" placeholder="juanMataP@example.com">
+                                <label for="adr"><i class="fa fa-address-card-o"></i> Direccion</label>
+                                <input type="text" id="adr" name="address" placeholder="500m despues de la pulperia">
+                                <label for="city"><i class="fa fa-institution"></i> Provincia</label>
+                                <input type="text" id="city" name="city" placeholder="San Jose">
+
+                                <div class="row">
+                                    <div class="col-50">
+                                        <label for="state">Ciudad</label>
+                                        <input type="text" id="state" name="state" placeholder="Pavas">
+                                    </div>
+                                    <div class="col-50">
+                                        <label for="zip">Codigo Postal</label>
+                                        <input type="text" id="zip" name="zip" placeholder="10109">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-50">
+                                <h3>Metodo de pago</h3>
+                                <label for="fname">Tarjetas aceptadas</label>
+                                <div class="icon-container">
+                                    <i class="fa fa-cc-visa" style="color:navy;"></i>
+                                    <i class="fa fa-cc-amex" style="color:blue;"></i>
+                                    <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                                    <i class="fa fa-cc-discover" style="color:orange;"></i>
+                                </div>
+                                <label for="cname">Nombre que aparece en la tarjeta:</label>
+                                <input type="text" id="cname" name="cardname" placeholder="Juan Mata Palos">
+                                <label for="ccnum">Numero de la tarjeta de credito</label>
+                                <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                                <label for="expmonth">Mes de expiracion</label>
+                                <input type="text" id="expmonth" name="expmonth" placeholder="04">
+
+                                <div class="row">
+                                    <div class="col-50">
+                                        <label for="expyear">Año de expiracion</label>
+                                        <input type="text" id="expyear" name="expyear" placeholder="2018">
+                                    </div>
+                                    <div class="col-50">
+                                        <label for="cvv">CVV</label>
+                                        <input type="text" id="cvv" name="cvv" placeholder="352">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <label>
+                            <input type="checkbox" checked="checked" name="sameadr"> La direccion de envio es la misma que la direccion de pago.
+                        </label>
+                        <input type="submit" value="Continue to checkout" class="btn">
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-25">
+                <div class="container">
+                    <h4>Cart
+                        <span class="price" style="color:black">
+                            <i class="fa fa-shopping-cart"></i>
+                            <b>4</b>
+                        </span>
+                    </h4>
+                    <p><a href="imagenes/Off-White x Dunk Low 'Lot 34 of 50'.jpg">Off-White x Dunk Low 'Lot 34 of 50'.</a> <span class="price">311.900.00 ₡</span></p>
+                    <p><a href="imagenes/Yeezy Boost 350 V2 'MX Oat'.">Yeezy Boost 350 V2 'MX Oat'.</a> <span class="price">191.500.00 ₡</span></p>
+                    <hr>
+                    <p>Total <span class="price" style="color:black"><b>503.400.00 ₡</b></span></p>
+                </div>
+            </div>
+        </div>
+        <p>Compra protegida por nuestro sistema SMART.</p>
+    </body>
+</html>
