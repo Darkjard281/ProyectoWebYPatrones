@@ -5,7 +5,6 @@
  */
 package com.ProyectoWebYPatrones.Controller;
 
-
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,9 +15,6 @@ import org.springframework.web.bind.annotation.*;
 @Controller
 public class IndexController {
 
-
-    
-
     @GetMapping("/")/*AccionDefault*/
     public String inicio() {//Con el podemos mandar a los documentos html(index) un objeto model
         return "index";/*Buscar en templates una vista llamada index*/
@@ -28,7 +24,14 @@ public class IndexController {
     public String inicioSesion() {
         return "iniciarSesion";
     }
-    
-    
 
+    @GetMapping("/busqueda")
+    public String busqueda() {
+        return "busqueda";
+    }
+
+    @GetMapping("/sobreN")
+    public String sobreN() {
+        return "sobreN";
+    }
 }

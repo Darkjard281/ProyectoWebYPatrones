@@ -131,3 +131,41 @@ div > ul{
     align-items: center;
 }
 
+.sobreNosotros{
+    color: white;
+    text-align: center;
+}
+
+#barraLateral{
+    position: absolute;
+    top: 12%;
+    left: 0;
+    height: 80%;
+    width: 15%;
+
+    color: white;
+    text-align: center;
+}
+
+.parrafoF{
+    color: white;
+}
+
+#contenido2{
+    position: relative;
+    top: 12%;
+    left: 18%;
+    height: 80%;
+    width: 80%;
+    color: white;
+    overflow: auto;
+    text-align: center;
+}
+
+.tituloSN{
+    font-size: 33px;
+    text-align: center;
+    color: #e8838e;
+    text-shadow: -3px 3px #ffffff, -2px -2px #ffffff, 3px -3px #ffffff, 3px 3px #f3f3f2, 6px 6px #6ac7c2;
+}
+
