@@ -49,9 +49,9 @@ and open the template in the editor.
                 </div>
             </div>
         </nav>
-        <div><a th:href="@{/Empleado/listadoEmpleado}">Ingresar a la base de datos</a></div>
+        <div class="IngresarBaseDeDatos"><a th:href="@{/Empleado/listadoEmpleado}">Ingresar a la base de datos</a></div>
     </header>
-    <div th:fragment="MenuBaseDeDatos"class="MenuBaseDeDatos" >
+    <div th:fragment="MenuBaseDeDatos" class="MenuBaseDeDatos">
         <a class="MenuItems" th:href="@{/Empleado/listadoEmpleado}">Empleados</a>
         <a class="MenuItems" th:href="@{/MarcaTennis/listado}">Marcas</a>
         <a class="MenuItems" th:href="@{/Articulo/listado}">Articulos</a>
