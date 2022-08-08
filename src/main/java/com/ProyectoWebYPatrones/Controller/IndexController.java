@@ -34,4 +34,14 @@ public class IndexController {
     public String sobreN() {
         return "sobreN";
     }
+    
+    @GetMapping("/favoritos")
+    public String favoritos() {
+        return "favoritos";
+    }
+    
+    @GetMapping("/pago")
+    public String pago() {
+        return "pago";
+    }
 }
