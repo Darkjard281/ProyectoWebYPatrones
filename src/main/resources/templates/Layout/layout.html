@@ -44,11 +44,12 @@ and open the template in the editor.
                         <input type="search" class="form-control caja-buscador" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
                         <button type="button" class="btn btn-outline-primary boton-buscador"><i class="fa-solid fa-magnifying-glass"></i></button>
                     </div>
-                    <a th:href="@{/Empleado/listadoEmpleado}"><i class="menu1-icono fa-regular fa-heart"></i></a>
+                    <a href=""><i class="menu1-icono fa-regular fa-heart"></i></a>
                     <a href=""><i class="menu1-icono fa-solid fa-box-open"></i></a>
                 </div>
             </div>
         </nav>
+        <div><a th:href="@{/Empleado/listadoEmpleado}">Ingresar a la base de datos</a></div>
     </header>
     <div th:fragment="MenuBaseDeDatos"class="MenuBaseDeDatos" >
         <a class="MenuItems" th:href="@{/Empleado/listadoEmpleado}">Empleados</a>
@@ -67,7 +68,7 @@ and open the template in the editor.
             </div>
             <div class="SobreNosotros">
                 <ul>
-                    <H5>Sobre Nosotros</H5>
+                    <H5><a class="TituloSobreNosotros" th:href="@{/sobreN}">Sobre Nosotros</a></H5>
                     <li>Noticias</li>
                     <li>Inversores</li>
                     <li>Propietarios</li>
