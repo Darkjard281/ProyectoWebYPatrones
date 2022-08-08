@@ -1,46 +1,56 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
     <head>
-        <div th:replace = "Layout/layout ::Estilos"></div>
-        <link th:href="@{/css/BaseDeDatos.css}" rel="stylesheet" type="text/css"/>
-    </head>
-    <body>
-        <header th:replace = "Layout/layout ::header"></header>
-        <div class="container-fluid">
-            <H1>Nuestros Empleados</H1>
-            <a th:href="@{/Empleado/nuevo}">Crear nuevo empleado</a>
-            <table class="table">       
-                <thead class="table-dark">
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Id</th>
-                        <th scope="col">Cedula</th>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">Appellido Paterno</th>
-                        <th scope="col">Appellido Materno</th>
-                        <th scope="col">Telefono</th>
-                        <th scope="col">Correo</th>
-                        <th scope="col">Activo</th>
-                        <th scope="col">Modificar</th>
-                        <th scope="col">Eliminar</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr th:each="item, contador:${empleados}">
-                        <th id="indice" scope="row" >[[${contador.count}]]</th>
-                        <td th:text=${item.EmpId}>
-                        <td th:text="${item.EmpCedula}"></td></td>
-                        <td th:text="${item.EmpNombre}"></td>
-                        <td th:text="${item.EmpApellidopaterno}"></td>
-                        <td th:text="${item.EmpApellidomaterno}"></td>
-                        <td th:text="${item.EmpTelefono}"></td>
-                        <td th:text="${item.EmpCorreo}"></td>
-                        <td><input type="checkbox" name="activo" th:checked="${item.EmpActivo}" disabled="true" /> </td>
-                        <td><a th:href="@{/Empleado/modificar/}+${item.EmpId}">Modificar</a></td>
-                        <td><a th:href="@{/Empleado/eliminar/}+${item.EmpId}">Eliminar</a></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </body>
+    <div th:replace = "Layout/layout ::Estilos"></div>
+    <link th:href="@{/css/BaseDeDatos.css}" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <header th:replace = "Layout/layout ::header"></header>
+    <div th:replace="Layout/layout::MenuBaseDeDatos"></div>
+    <div class="container-fluid">
+        <H1>Nuestros Empleados</H1>
+        <a th:href="@{/Empleado/nuevo}">
+            <button type="button" class="btn btn-primary btn-block CrearNuevo">                    
+                <i class="fas fa-plus"></i> Crear nuevo empleado
+            </button>
+        </a>
+        <table class="table">       
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Id</th>
+                    <th scope="col">Cedula</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Appellido Paterno</th>
+                    <th scope="col">Appellido Materno</th>
+                    <th scope="col">Telefono</th>
+                    <th scope="col">Correo</th>
+                    <th class="table-HeadCenter" scope="col">Activo</th>
+                    <th class="table-HeadCenter" scope="col">Modificar</th>
+                    <th class="table-HeadCenter" scope="col">Eliminar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="item, contador:${empleados}">
+                    <th id="indice" scope="row" >[[${contador.count}]]</th>
+                    <td th:text=${item.EmpId}>
+                    <td th:text="${item.EmpCedula}"></td></td>
+                    <td th:text="${item.EmpNombre}"></td>
+                    <td th:text="${item.EmpApellidopaterno}"></td>
+                    <td th:text="${item.EmpApellidomaterno}"></td>
+                    <td th:text="${item.EmpTelefono}"></td>
+                    <td th:text="${item.EmpCorreo}"></td>
+                    <td class="activo"><input  type="checkbox" name="activo" th:checked="${item.EmpActivo}" disabled="true" /> </td>
+                    <td class="table-ItemCenter"><a th:href="@{/Empleado/modificar/}+${item.EmpId}"><button type="button" class="btn btn-primary btn-block Agregar">                    
+                                <i class="fa-solid fa-screwdriver-wrench"></i> Modificar
+                            </button></a></td>
+                    <td class="table-ItemCenter"><a th:href="@{/Empleado/eliminar/}+${item.EmpId}"><button type="button" class="btn btn-primary btn-block Eliminar">                    
+                                <i class="fa-solid fa-eraser"></i> Eliminar
+                            </button></a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div th:replace ="Layout/layout ::Script"></div>
+</body>
 </html>

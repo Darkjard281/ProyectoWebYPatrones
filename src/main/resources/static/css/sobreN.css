@@ -1,0 +1,49 @@
+.mensaje-Bienvenida{
+    height: 8vh;
+}
+
+.Info-SobreN{
+    color: #AD2FC5;
+}
+
+.contenedor{
+    display: flex;
+    height: 82vh;
+    align-items: center;
+}
+
+.container-fluid{
+    border-radius: 10px;
+    display: flex;
+    max-width: 55vw;
+    min-width: 760px;
+    min-height: 70vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ebc000;
+    box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+    color:#df3dff;
+}
+
+.Div-mantenerYOlvidasteContra{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+}
+
+
+.Entrar{
+    width: 100%
+}
+
+.AunNocuenta{
+    padding-top:3vh;
+    display: block;
+    text-align: center;
+}
+
+.footer{
+    position:relative;
+    bottom:0;
+}
