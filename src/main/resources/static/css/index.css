@@ -88,7 +88,7 @@ img{
 .tarjetaModelo2-divImagen > img{
     height: 280px;
     width: 250px;
-    object-fit: fill;
+    object-fit: contain;
     border-radius: 4px;
 }
 
@@ -101,3 +101,5 @@ img{
     max-width: 40rem;
     min-width: 30rem;
 }
+
+/*Editar del tamaño de las imagenes del apartado de NUEVOS*/

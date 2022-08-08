@@ -44,4 +44,27 @@ public class IndexController {
     public String pago() {
         return "pago";
     }
+    
+    @GetMapping("/carrito")
+    public String carrito() {
+        return "carrito";
+    }
+    
+    @GetMapping("/registro")
+    public String registro() {
+        return "registro";
+    }
+    
+    @GetMapping("/marcas")
+    public String marcas() {
+        return "marcas";
+    }
+    @GetMapping("/reviews")
+    public String reviews() {
+        return "reviews";
+    }
+    @GetMapping("/tallas")
+    public String tallas() {
+        return "tallas";
+    }
 }
