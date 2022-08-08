@@ -44,4 +44,14 @@ public class IndexController {
     public String pago() {
         return "pago";
     }
+    
+    @GetMapping("/carrito")
+    public String carrito() {
+        return "carrito";
+    }
+    
+    @GetMapping("/registro")
+    public String registro() {
+        return "registro";
+    }
 }
