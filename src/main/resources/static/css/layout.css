@@ -169,3 +169,7 @@ div > ul{
     text-shadow: -3px 3px #ffffff, -2px -2px #ffffff, 3px -3px #ffffff, 3px 3px #f3f3f2, 6px 6px #6ac7c2;
 }
 
+.TituloSobreNosotros:hover{
+ color: #AD2FC5;
+}
+
