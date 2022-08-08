@@ -40,7 +40,7 @@ and open the template in the editor.
                 <div class="Buscador-E-iconos">
                     <div class="input-group buscardor">
                         <input type="search" class="form-control caja-buscador" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
-                        <button type="button" class="btn btn-outline-primary boton-buscador"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        <button type="button" class="btn btn-outline-primary boton-buscador"><a th:href="@{/busqueda}"><i class="fa-solid fa-magnifying-glass"></i></a></button>
                     </div>
                     <a th:href="@{/favoritos}"><i class="menu1-icono fa-regular fa-heart"></i></a>
                     <a th:href="@{/carrito}"><i class="menu1-icono fa-solid fa-box-open"></i></a>
