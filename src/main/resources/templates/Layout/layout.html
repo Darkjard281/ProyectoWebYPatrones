@@ -13,6 +13,9 @@ and open the template in the editor.
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
         <link href="css/layout.css" rel="stylesheet" type="text/css"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
         <link th:href="@{/css/layout.css}" rel="stylesheet" type="text/css"/>
     </div>
 </head>
@@ -28,7 +31,7 @@ and open the template in the editor.
                 <a th:href="@{/Login}"><button type="button" class="menu1-btn btn btn-outline-primary ">Iniciar Session</button></a>
             </div>
             <div class="menu2">
-                <a th:href="@{/}"><div class="menu2-logo"><img src="src" alt="Logo"/></div></a>
+                <a th:href="@{/}"><div class="menu2-logo">SneakerShop</div></a>
                 <ul class="filtro">
                     <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="pagina2.html">Nuevo</a></li>
                     <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="pagina3.html">Hombre</a></li>
@@ -41,12 +44,17 @@ and open the template in the editor.
                         <input type="search" class="form-control caja-buscador" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
                         <button type="button" class="btn btn-outline-primary boton-buscador"><i class="fa-solid fa-magnifying-glass"></i></button>
                     </div>
-                    <a th:href="@{/Empleado/listadoEmpleado}"><i class="fa-regular fa-heart"></i></a>
-                    <a href=""><i class="fa-solid fa-box-open"></i></a>
+                    <a th:href="@{/Empleado/listadoEmpleado}"><i class="menu1-icono fa-regular fa-heart"></i></a>
+                    <a href=""><i class="menu1-icono fa-solid fa-box-open"></i></a>
                 </div>
             </div>
         </nav>
     </header>
+    <div th:fragment="MenuBaseDeDatos"class="MenuBaseDeDatos" >
+        <a class="MenuItems" th:href="@{/Empleado/listadoEmpleado}">Empleados</a>
+        <a class="MenuItems" th:href="@{/MarcaTennis/listado}">Marcas</a>
+        <a class="MenuItems" th:href="@{/Articulo/listado}">Articulos</a>
+    </div>
     <footer th:fragment="footer" >
         <div class="footer">
             <div class="contactenos">
@@ -70,7 +78,11 @@ and open the template in the editor.
             </div>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js" integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <div th:fragment="Script" >
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js" integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    </div>
 </body>
 </html>

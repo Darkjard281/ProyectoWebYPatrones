@@ -1,16 +1,38 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>TODO supply a title</title>
+        <title>SneakerShop</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <div th:replace = "Layout/layout ::Estilos"></div>
+        <link th:href="@{/css/BaseDeDatos.css}" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <div>TODO write content</div>
+        <header th:replace = "Layout/layout ::header"></header>
+        <div class="container-fluid">
+        <H1>Marca</H1>
+        <a class="regresar" th:href="@{/MarcaTennis/listado}">
+            <button type="button" class="btn btn-primary btn-block Regresar">                    
+                <i class="fas fa-arrow-left"></i> Regresar
+            </button>
+        </a>
+        <div class="contenedor">     
+        <div class="DatosALlenar">
+                <div class="col-6">
+                    <form th:action="@{/MarcaTennis/guardar}" 
+                          method="POST" 
+                          th:object="${marcatennis}">
+                        <input type="hidden" name="TenId" th:field="*{MarcaCod}"/><!-- Requerido para que mi CRUD identifique cunado es un update o un nuevo registro-->
+                        <div class="form-floating form-items">
+                            <input type="text" class="form-control" placeholder="cedula" id="MarcaNom" th:field="*{MarcaNom}" required="true"/>
+                            <label for="MarcaNom">Nombre marca:</label>
+                        </div>
+                        <button type="submit" class="btn btn-outline-primary form-items">Guardar</button>
+                    </form>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div th:replace ="Layout/layout ::Script"></div>
     </body>
 </html>

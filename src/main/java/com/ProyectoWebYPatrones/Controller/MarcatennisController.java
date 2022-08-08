@@ -30,28 +30,28 @@ public class MarcatennisController {
         return "/MarcaTennis/listado";
     }
     
-    @GetMapping("/Marcatennis/nuevo")
+    @GetMapping("/MarcaTennis/nuevo")
     public String nuevoMarcatennis(Marcatennis marcatennis) {
-        return "/Marcatennis/modificar";
+        return "/MarcaTennis/modificar";
     }
     
-    @PostMapping("/Marcatennis/guardar")
+    @PostMapping("/MarcaTennis/guardar")
     public String guardarMarcatennis(Marcatennis marcatennis) {
         marcatennisService.save(marcatennis);
-        return "redirect:/Marcatennis/listado";
+        return "redirect:/MarcaTennis/listado";
     }
     
-    @GetMapping("/Marcatennis/modificar/{EmpId}")
+    @GetMapping("/MarcaTennis/modificar/{marcaCod}")
     public String modificarMarcatennis(Marcatennis marcatennis, Model model) {
         marcatennis = marcatennisService.getMarca(marcatennis);
         model.addAttribute("marcatennis", marcatennis);
-        return "/Marcatennis/modificar";
+        return "/MarcaTennis/modificar";
     }
     
-    @GetMapping("/Marcatennis/eliminar/{EmpId}")
+    @GetMapping("/MarcaTennis/eliminar/{marcaCod}")
     public String elimninarMarcatennis(Marcatennis marcatennis) {
         marcatennisService.delete(marcatennis);
-        return "redirect:/Marcatennis/listado";
+        return "redirect:/MarcaTennis/listado";
     }
     
 }

@@ -19,13 +19,13 @@ public class Articulo implements Serializable{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long TenId;
     
-    @Column(name="Ten_CodigoSerial")
-    private String TenCodigoSerial;
+    
             
     private String TenNombre,
+            TenCodigoserial,
             TenColor;
     
-    private int TenTamaño,
+    private int TenTamanno,
             TenCosto;
     
     
@@ -36,19 +36,19 @@ public class Articulo implements Serializable{
     public Articulo() {
     }
 
-    public Articulo(String TenCodigoSerial, String TenNombre, String TenColor, int TenTamaño, int TenCosto) {
-        this.TenCodigoSerial = TenCodigoSerial;
+    public Articulo(String TenCodigoSerial, String TenNombre, String TenColor, int TenTamanno, int TenCosto) {
+        this.TenCodigoserial = TenCodigoSerial;
         this.TenNombre = TenNombre;
         this.TenColor = TenColor;
-        this.TenTamaño = TenTamaño;
+        this.TenTamanno = TenTamanno;
         this.TenCosto = TenCosto;
     }    
 
-    public Articulo(String TenCodigoSerial, String TenNombre, String TenColor, int TenTamaño, int TenCosto, Marcatennis marcatennis) {
-        this.TenCodigoSerial = TenCodigoSerial;
+    public Articulo(String TenCodigoserial, String TenNombre, String TenColor, int TenTamanno, int TenCosto, Marcatennis marcatennis) {
+        this.TenCodigoserial = TenCodigoserial;
         this.TenNombre = TenNombre;
         this.TenColor = TenColor;
-        this.TenTamaño = TenTamaño;
+        this.TenTamanno = TenTamanno;
         this.TenCosto = TenCosto;
         this.marcatennis = marcatennis;
     }

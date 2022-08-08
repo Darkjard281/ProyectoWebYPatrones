@@ -9,50 +9,58 @@
     </head>
     <body>
         <header th:replace = "Layout/layout ::header"></header>
-        <H1>Datos del Empleado</H1>
-        <a th:href="@{/MarcaTennis/listado}">Regresar</a>
+        
         <div class="container-fluid">
-            <div class="col-6">
-                <form th:action="@{/Empleado/guardar}" 
-                      method="POST" 
-                      th:object="${empleado}">
-                    <input type="hidden" name="EmpId" th:field="*{EmpId}"/><!-- Requerido para que mi CRUD identifique cunado es un update o un nuevo registro-->
-                    <div class="form-floating">
-                        <input type="text" class="form-control" placeholder="cedula" id="EmpCedula" th:field="*{EmpCedula}"/>
-                        <label for="EmpCedula">Cedula:</label>
-                    </div>
-                    <div class="form-floating">
-                        <input type="text" class="form-control" placeholder="EmpNombre" id="EmpNombre" th:field="*{EmpNombre}"/>
-                        <label for="EmpNombre">Nombre</label>
-                    </div>
-                    <div class="form-floating">
-                        <input type="text" class="form-control" placeholder="Apellido1" id="EmpApellidopaterno" th:field="*{EmpApellidopaterno}"/>
-                        <label for="EmpApellidopaterno">Primer apellido:</label>
-                    </div>
-                    <div class="form-floating">
-                        <input type="text" class="form-control" placeholder="Apellido2" id="EmpApellidomaterno" th:field="*{EmpApellidomaterno}"/>
-                        <label for="EmpApellidomaterno">Segundo apellido:</label>
-                    </div>
-                    
-                    <div class="form-floating">
-                        <input type="tel" class="form-control" placeholder="telefono" id="EmpTelefono" th:field="*{EmpTelefono}"/>
-                        <label for="EmpTelefono">Telefono:</label>
-                    </div>
-                    <div class="input-group">
-                    <span class="input-group-text">@</span>
-                    <div class="form-floating">
-                        <input type="email" class="form-control" placeholder="email" id="EmpCorreo" th:field="*{EmpCorreo}"/>
-                        <label for="EmpCorreo">Correo:</label>
-                    </div>
-                    </div>
-                    <div class="form-floating">
-                        <input type="text" class="form-control" placeholder="password" id="EmpContraseña" th:field="*{EmpContraseña}"/>
-                        <label for="EmpContraseña">Contraseña:</label>
-                    </div>
-                    <button type="submit" class="btn btn-outline-primary">Guardar</button>
-                </form>
+        <H1>Datos del Empleado</H1>
+        <a class="regresar" th:href="@{/Empleado/listadoEmpleado}">
+            <button type="button" class="btn btn-primary btn-block Regresar">                    
+                <i class="fas fa-arrow-left"></i> Regresar
+            </button>
+        </a>
+        <div class="contenedor">     
+        <div class="DatosALlenar">
+                <div class="col-6">
+                    <form th:action="@{/Empleado/guardar}" 
+                          method="POST" 
+                          th:object="${empleado}">
+                        <input type="hidden" name="EmpId" th:field="*{EmpId}"/><!-- Requerido para que mi CRUD identifique cunado es un update o un nuevo registro-->
+                        <div class="form-floating form-items">
+                            <input type="text" class="form-control" placeholder="cedula" id="EmpCedula" th:field="*{EmpCedula}" required="true"/>
+                            <label for="EmpCedula">Cedula:</label>
+                        </div>
+                        <div class="form-floating form-items">
+                            <input type="text" class="form-control" placeholder="EmpNombre" id="EmpNombre" th:field="*{EmpNombre}"required="true"/>
+                            <label for="EmpNombre">Nombre</label>
+                        </div>
+                        <div class="form-floating form-items">
+                            <input type="text" class="form-control" placeholder="Apellido1" id="EmpApellidopaterno" th:field="*{EmpApellidopaterno}"required="true"/>
+                            <label for="EmpApellidopaterno">Primer apellido:</label>
+                        </div>
+                        <div class="form-floating form-items">
+                            <input type="text" class="form-control" placeholder="Apellido2" id="EmpApellidomaterno" th:field="*{EmpApellidomaterno}"required="true"/>
+                            <label for="EmpApellidomaterno">Segundo apellido:</label>
+                        </div>
+                        <div class="form-floating form-items">
+                            <input type="tel" class="form-control" placeholder="telefono" id="EmpTelefono" th:field="*{EmpTelefono}"required="true"/>
+                            <label for="EmpTelefono">Telefono:</label>
+                        </div>
+                        <div class="input-group form-items">
+                            <span class="input-group-text">@</span>
+                            <div class="form-floating">
+                                <input type="email" class="form-control" placeholder="email" id="EmpCorreo" th:field="*{EmpCorreo}"required="true"/>
+                                <label for="EmpCorreo">Correo:</label>
+                            </div>
+                        </div>
+                        <div class="form-floating form-items">
+                            <input type="text" class="form-control" placeholder="password" id="EmpContraseña" th:field="*{EmpContraseña}"/>
+                            <label for="EmpContraseña">Contraseña:</label>
+                        </div>
+                        <button type="submit" class="btn btn-outline-primary form-items">Guardar</button>
+                    </form>
+                </div>
+            </div>
             </div>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+        <div th:replace ="Layout/layout ::Script"></div>
     </body>
 </html>

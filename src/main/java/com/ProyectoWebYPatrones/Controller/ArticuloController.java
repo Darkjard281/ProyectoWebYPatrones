@@ -23,35 +23,35 @@ public class ArticuloController {
     @Autowired
     private ArticuloService articuloService;
 
-    @GetMapping("/Articulo/listadoArticulo")
+    @GetMapping("/Articulo/listado")
     public String listadoArticulo(Model model) {
         var articulos = articuloService.getArticulos();
         model.addAttribute("articulos", articulos);
-        return "/Articulo/listadoArticulo";
+        return "/Articulo/listado";
     }
 
     @GetMapping("/Articulo/nuevo")
     public String nuevoArticulo(Articulo articulo) {
-        return "/Articulo/modificarArticulo";
+        return "/Articulo/modificar";
     }
 
     @PostMapping("/Articulo/guardar")
     public String guardarArticulo(Articulo articulo) {
         articuloService.save(articulo);
-        return "redirect:/Articulo/listadoArticulo";
+        return "redirect:/Articulo/listado";
     }
 
-    @GetMapping("/Articulo/modificar/{EmpId}")
+    @GetMapping("/Articulo/modificar/{TenId}")
     public String modificarArticulo(Articulo articulo, Model model) {
         articulo = articuloService.getArticulo(articulo);
         model.addAttribute("articulo", articulo);
-        return "/Articulo/modificarArticulo";
+        return "/Articulo/modificar";
     }
 
-    @GetMapping("/Articulo/eliminar/{EmpId}")
+    @GetMapping("/Articulo/eliminar/{TenId}")
     public String elimninarArticulo(Articulo articulo) {
         articuloService.delete(articulo);
-        return "redirect:/Articulo/listadoArticulo";
+        return "redirect:/Articulo/listado";
     }
     
 }
