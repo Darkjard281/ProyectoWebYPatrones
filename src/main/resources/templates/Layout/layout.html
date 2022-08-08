@@ -24,20 +24,18 @@ and open the template in the editor.
         <nav class="navegador">
             <div class="menu1">
                 <div>
-                    <a href="https://www.instagram.com/"><i class="menu1-icono fa-brands fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/sneakermag.la/"><i class="menu1-icono fa-brands fa-instagram"></i></a>
                     <a href="https://www.facebook.com"><i class="menu1-icono fa-brands fa-facebook-f"></i></a>
                     <a href="https://web.whatsapp.com/"><i class="menu1-icono fa-brands fa-whatsapp"></i></a>
                 </div>
-                <a th:href="@{/Login}"><button type="button" class="menu1-btn btn btn-outline-primary ">Iniciar Session</button></a>
+                <a th:href="@{/Login}"><button type="button" class="menu1-btn btn btn-outline-primary ">Iniciar Sesión</button></a>
             </div>
             <div class="menu2">
                 <a th:href="@{/}"><div class="menu2-logo">SneakerShop</div></a>
                 <ul class="filtro">
-                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="pagina2.html">Nuevo</a></li>
-                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="pagina3.html">Hombre</a></li>
-                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="pagina4.html">Mujer</a></li>
-                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="pagina5.html">Niños</a></li>
-                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="pagina6.html">Marcas</a></li>
+                        <li class="nav-menu-item"><a class="nav-menu-link nav-link" th:href="@{/marcas}">MARCAS</a></li>
+                        <li class="nav-menu-item"><a class="nav-menu-link nav-link" th:href="@{/reviews}">REVIEWS</a></li>
+                        <li class="nav-menu-item"><a class="nav-menu-link nav-link" th:href="@{/tallas}">TALLAS</a></li>
                 </ul>
                 <div class="Buscador-E-iconos">
                     <div class="input-group buscardor">
@@ -54,16 +52,16 @@ and open the template in the editor.
     <div th:fragment="MenuBaseDeDatos" class="MenuBaseDeDatos">
         <a class="MenuItems" th:href="@{/Empleado/listadoEmpleado}">Empleados</a>
         <a class="MenuItems" th:href="@{/MarcaTennis/listado}">Marcas</a>
-        <a class="MenuItems" th:href="@{/Articulo/listado}">Articulos</a>
+        <a class="MenuItems" th:href="@{/Articulo/listado}">Artículos</a>
     </div>
     <footer th:fragment="footer" >
         <div class="footer">
             <div class="contactenos">
                 <ul>
-                    <H5>Contactenos</H5>
+                    <H5>Contáctenos</H5>
                     <li>Obten ayuda</li>
-                    <li>Retroalimentacion</li>
-                    <li>Telefono</li>
+                    <li>Retroalimentación</li>
+                    <li>Teléfono</li>
                 </ul>
             </div>
             <div class="SobreNosotros">

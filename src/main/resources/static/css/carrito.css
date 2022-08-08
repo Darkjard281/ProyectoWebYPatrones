@@ -1,5 +1,5 @@
 
-/*Editir del tamaño de las imagenes del apartado de NUEVOS*/
+/*Editar del tamaño de las imagenes del apartado de NUEVOS*/
 .tarjetaModelo2-divImagen > img{ 
     height: 200px;
     width: 360px;
@@ -99,3 +99,4 @@
 .tarjetaModelo3-divDescripcion{
     text-align: center;
 }
+

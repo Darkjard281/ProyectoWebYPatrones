@@ -54,4 +54,17 @@ public class IndexController {
     public String registro() {
         return "registro";
     }
+    
+    @GetMapping("/marcas")
+    public String marcas() {
+        return "marcas";
+    }
+    @GetMapping("/reviews")
+    public String reviews() {
+        return "reviews";
+    }
+    @GetMapping("/tallas")
+    public String tallas() {
+        return "tallas";
+    }
 }
