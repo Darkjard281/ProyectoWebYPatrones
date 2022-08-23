@@ -44,9 +44,5 @@ public class EmpleadoController {
         return "redirect:/Empleado/listadoEmpleado";
     }
     
-    @GetMapping("/Empleado/xxxxx")
-    public String xxxxx() {
-        return "/Empleado/xxxxx";
-    }
 
 }

@@ -6,7 +6,9 @@
 package com.ProyectoWebYPatrones.Controller;
 
 import com.ProyectoWebYPatrones.domain.Articulo;
+
 import com.ProyectoWebYPatrones.service.ArticuloService;
+import com.ProyectoWebYPatrones.service.MarcatennisService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -22,6 +24,9 @@ public class ArticuloController {
     
     @Autowired
     private ArticuloService articuloService;
+    
+    @Autowired
+    private MarcatennisService marcatennisService;
 
     @GetMapping("/Articulo/listado")
     public String listadoArticulo(Model model) {
@@ -31,7 +36,9 @@ public class ArticuloController {
     }
 
     @GetMapping("/Articulo/nuevo")
-    public String nuevoArticulo(Articulo articulo) {
+    public String nuevoArticulo(Articulo articulo, Model model) {
+        var marcatennis = marcatennisService.getMarcas();
+        model.addAttribute("marcas", marcatennis);
         return "/Articulo/modificar";
     }
 
@@ -43,6 +50,8 @@ public class ArticuloController {
 
     @GetMapping("/Articulo/modificar/{TenId}")
     public String modificarArticulo(Articulo articulo, Model model) {
+        var marcatennis = marcatennisService.getMarcas();
+        model.addAttribute("marcas", marcatennis);
         articulo = articuloService.getArticulo(articulo);
         model.addAttribute("articulo", articulo);
         return "/Articulo/modificar";

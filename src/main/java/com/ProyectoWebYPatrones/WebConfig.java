@@ -22,7 +22,7 @@ import org.springframework.web.servlet.i18n.SessionLocaleResolver;
  * @author jarod
  */
 
-/*
+
 @Configuration
 public class WebConfig implements WebMvcConfigurer {
     @Bean
@@ -49,4 +49,3 @@ public class WebConfig implements WebMvcConfigurer {
     registro.addViewController("/errores/403").setViewName("/errores/403");
     }
 }
-*/

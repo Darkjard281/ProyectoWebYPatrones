@@ -5,6 +5,7 @@
 }
 
 .menu2-logo{
+    
     font-family: 'Great Vibes', cursive;
     font-size: 2rem;
     font-weight: bold;
@@ -83,8 +84,14 @@ a{
 }
 
 .footer{
+    margin-top: 3rem;
     background: linear-gradient(133deg, rgba(8,47,48,1) 0%, rgba(38,158,161,1) 27%, rgba(76,97,176,1) 50%, rgba(109,36,116,1) 68%, rgba(27,3,29,1) 100%);
-    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+}
+
+.footer__Arriba{
     padding: 7px;
     width: 100%;
     display: flex;
@@ -93,11 +100,33 @@ a{
     color: #ffffff;
 }
 
-.footer >div{
+.footer__Arriba >div{
     display: flex;
     align-items: center;
     bottom: 0;
     width: 100%;
+    flex-direction: column;
+}
+
+.derechos{
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+}
+
+.Otros{
+    text-align: left;
+}
+
+.Otros__P{
+    text-align: left;
+    color: #ffffff;
+    margin:0;
+}
+
+.Otros__P-Span{
+    color: Red;
 }
 
 div > ul{

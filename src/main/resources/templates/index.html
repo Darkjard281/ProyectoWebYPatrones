@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://thymeleaf.org/extras/spring-security">
     <head>
         <div th:replace = "Layout/layout ::Estilos"></div>
         <link href="css/index.css" rel="stylesheet" type="text/css"/>
@@ -49,21 +50,21 @@
         </div>  
         <div class="container-fluid">
             <div class="row container-tendencia">
-                <H2 class="container-titulo">En tendencia</H2>
+                <H2 class="container-titulo" th:text="#{inicio.tendencia}"></H2>
                 <div class="col "><div class="card" style="width: 17rem;">
                         <img class="card-img-top" src="imagenes/Ben & Jerry's x Dunk Low SB 'Chunky Dunky' Special Ice Cream Box.jpg" alt="Card image cap">
                         <div class="card-body">
                             <h5 class="card-title">Ben & Jerry's x Dunk Low SB 'Chunky Dunky' Special Ice Cream Box.</h5>
                             <p class="card-text">Hecho en colaboración con Ben & Jerry's, el 'Chunky Dunky' de Nike Dunk Low SB reproduce el empaque utilizado para el sabor.</p>
-                        </div><!--  Chunky Monkey de la marca de helados. La parte superior de cuero representa cielos azules y pastos verdes, mientras que las superposiciones de pelo de caballo se representan con un estampado de vaca manchada. Un Swoosh de cuero amarillo tiene un efecto de helado derretido para un toque visual adicional. En la parte superior de la lengua, la etiqueta tejida presenta una etiqueta de Chunky Dunky junto con la marca Nike SB. -->
+                        </div>
                     </div>
                 </div>
                 <div class="col "><div class="card" style="width: 17rem;">
-                        <img class="card-img-top" src="imagenes/Air Jordan 1 “Cactus Jack”.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="imagenes/Air Jordan 1 Catus Jack.jpg" alt="Card image cap">
                         <div class="card-body">
                             <h5 class="card-title">Air Jordan 1 “Cactus Jack”.</h5>
                             <p class="card-text">El Travis Scott x Air Jordan 1 Retro High presenta una nueva imagen de la silueta icónica, gracias a un Swoosh de gran tamaño orientado hacia atrás en el lateral.</p>
-                        </div><!--  Un Swoosh de orientación tradicional adorna el lado medio de la parte superior, que está construido con una combinación de cuero blanco y suede marrón. Los detalles adicionales adicionales incluyen una construcción de doble capa en el cuello y el logotipo de la cara de Scott en relieve en el talón. -->
+                        </div>
                     </div>
                 </div>
                 <div class="col "><div class="card" style="width: 17rem;">
@@ -71,7 +72,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Yeezy Foam Runner 'Stone Sage'.</h5>
                             <p class="card-text">El adidas Yeezy Foam Runner 'Sage' ofrece una iteración monótona de la silueta similar a un zueco de Kanye West. Con un tono bronceado ligeramente más oscuro que el colorway debut.</p>
-                        </div><!--  'Ararat' de 2020, el slip-on hace uso de una estructura flexible de una pieza que combina EVA estándar con un compuesto de espuma a base de algas. Los múltiples puertos de ventilación permiten que los pies respiren, mientras que los interiores texturizados ofrecen un agarre antideslizante. Bajo los pies, una banda de rodadura clásica en espiga proporciona una tracción confiable. -->
+                        </div>
                     </div>
                 </div>
                 <div class="col "><div class="card" style="width: 17rem;">
@@ -79,7 +80,7 @@
                         <div class="card-body">
                             <h5 class="card-title">OFF-WHITE x Air Jordan 1 Retro High OG - Chicago.</h5>
                             <p class="card-text">Creado por el diseñador Virgil Abloh, el Air Jordan 1 x OFF-WHITE se presenta en el clásico colorway de Chicago. 'Air' impreso en la entresuela.</p>
-                        </div><!--  Algunas de las características a medio terminar de las zapatillas de deporte incluyen un Swoosh conectado a la zapatilla con costuras azules visibles,  y una corbata con cremallera en el cuello. La caja se deconstruye ya que se ha vuelto del revés, con el interior consistente en una base negra y el logotipo dorado de Jumpman, mientras que el exterior es de cartón liso con las palabras "Jumpman" impresas. La colección OFF-WHITE de Virgil incluyó iteraciones remezcladas de Air VaporMax, Air Presto, Air Max 90, Blazer, Air Max 97, Hyperdunk 2017, Air Force 1, Zoom Fly y Chuck Taylor. -->
+                        </div>
                     </div>
                 </div>
                 <div class="col "><div class="card" style="width: 17rem;">
@@ -87,13 +88,13 @@
                         <div class="card-body">
                             <h5 class="card-title">Aimé Leon Dore x 550 'Evergreen'.</h5>
                             <p class="card-text">Este ejemplar se caracterizaba por un diseño de cuero liso con paneles perforados y una malla para mejorar la transpirabilidad.</p>
-                        </div><!--  de la zapatilla. Además, la característica ‘N’ de New Balance se rediseñó con un cuerpo más grueso que, como indica el portal Sneaker News -->
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="Nuevo">
-            <H2 class="container-titulo">Nuevo</H2>
+            <H2 class="container-titulo" th:text="#{inicio.nuevo}"></H2>
             <div class="container-fluid">
                 <div class="row container-nuevo">
                     <div class="col ">
@@ -104,7 +105,7 @@
                             <div class="tarjetaModelo2-divDescripcion"> 
                                 <h5>Yeezy Slide 'Glow Green'.</h5>
                                 <p>
-                                    Las Yeezy Slide 'Glow Green' muestra la interpretación minimalista de Kanye West de una sandalia deportiva. Se aplica un acabado monocromático en un tono verde sutil a la silueta sin cordones, construida con espuma EVA para una durabilidad ligera. La plantilla brinda mayor comodidad con una capa superior suave, grabada con la marca de tres rayas de adidas en el talón.
+                                    Las Yeezy Slide 'Glow Green' muestra la interpretación minimalista de Kanye West de una sandalia deportiva. 
                                 </p><!--  Debajo de los pies, la suela exterior está formada con ranuras horizontales para una mejor tracción. -->
                                 <button type="button" class="btn btn-outline-primary tarjetaModelo2Boton">Ver mas</button>
                             </div>    
@@ -118,7 +119,7 @@
                             <div class="tarjetaModelo2-divDescripcion"> 
                                 <h5>Yeezy Boost 350 V2 'MX Rock'.</h5>
                                 <p>
-                                    El adidas Yeezy Boost 350 V2 'MX Rock' exhibe rayas sedimentarias de marrón y gris en una parte superior Primeknit transpirable en un acabado de carbón oscuro. La estructura similar a un calcetín está equipada con un cierre de cordones tradicional y una lengüeta de tirador de cincha fijada al talón. Una franja en el lateral de la zapatilla ofrece una transpirabilidad mejorada.
+                                    El adidas Yeezy Boost 350 V2 'MX Rock' exhibe rayas sedimentarias de marrón y gris en una parte superior Primeknit transpirable en un acabado de carbón oscuro. 
                                 </p> <!--  de monofilamento post-teñida que atraviesa     La amortiguación ligera es cortesía de una entresuela Boost completamente enjaulada, visible a través de los detalles recortados en la suela de goma. -->
                                 <button type="button" class="btn btn-outline-primary tarjetaModelo2Boton">Ver mas</button>
                             </div>    
@@ -134,8 +135,8 @@
                             <div class="tarjetaModelo2-divDescripcion"> 
                                 <h5>Union LA x Air Jordan 2 Retro SP 'Rattan'.</h5>
                                 <p>
-                                    La secuela de la colaboración Air Jordan 1 de 2018 de los socios creativos, la Union LA x Air Jordan 2 Retro 'Guava Ice' ofrece una versión vibrante de la silueta clásica. La parte superior combina ante rosa suave con malla transpirable en el cuello y la puntera, siguiendo las pautas de un boceto original de Tinker Hatfield.
-                                </p><!-- . Las alas de TPU semitranslúcidas brindan soporte estructural Otros éxitos de la marca incluyen una etiqueta Union amarilla en el panel lateral, Nike Air en el talón trasero y una etiqueta Air Jordan tejida sobre la lengüeta doblada. -->
+                                    La secuela de la colaboración Air Jordan 1 de 2018 de los socios creativos, la Union LA x Air Jordan 2 Retro 'Guava Ice' ofrece una versión vibrante de la silueta clásica. 
+                                </p>
                                 <button type="button" class="btn btn-outline-primary tarjetaModelo2Boton">Ver mas</button>
                             </div>    
                         </div>
@@ -148,8 +149,8 @@
                             <div class="tarjetaModelo2-divDescripcion"> 
                                 <h5>Zoom Kobe 6 Protro 'Grinch'.</h5>
                                 <p>
-                                    Las Nike Zoom Kobe 6 Protro 'Grinch' recuperan una combinación de colores querida lanzada inicialmente en 2010 como parte de la colección Nike Basketball Christmas Day. Actualizada con la tecnología de amortiguación Zoom Air contemporánea, la zapatilla presenta la estética llamativa del original, resaltada por un acabado verde vibrante en la parte superior.
-                                </p><!-- Las 'islas' de poliuretano cubren la parte superior sintética, imitando la textura de la piel de serpiente al tiempo que brindan mayor durabilidad.-->
+                                    Las Nike Zoom Kobe 6 Protro 'Grinch' recuperan una combinación de colores querida lanzada inicialmente en 2010 como parte de la colección Nike Basketball Christmas Day. 
+                                </p>
                                 <button type="button" class="btn btn-outline-primary tarjetaModelo2Boton">Ver mas</button>
                             </div>    
                         </div>
@@ -159,7 +160,7 @@
         </div>
 
         <div class="row container-descuento">
-            <H2 class="container-titulo">En descuento</H2>
+            <H2 class="container-titulo" th:text="#{inicio.descuento}"></H2>
             <div class="col "><div class="card tarjetaModelo3">
                         <img class="card-img-top" src="imagenes/OFF-WHITE x Chuck 70 'White'.jpg" alt="Card image cap">
                         <div class="card-body">
